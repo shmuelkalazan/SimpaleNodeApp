@@ -3,7 +3,9 @@ var mongoose = require('mongoose');
 var app = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/animals')
+mongoose.connect('mongodb://mongidb:27017/animals')
+
+// mongoose.connect('mongodb://localhost:27017/animals')
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Could not connect to MongoDB', err));
 
@@ -32,6 +34,6 @@ app.get('/', function (req, res) {
 });
 
 // Start the server
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000');
+app.listen(3001, function () {
+  console.log('Example app listening on port 3001');
 });
